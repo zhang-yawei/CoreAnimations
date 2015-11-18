@@ -296,10 +296,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QDU-OF-cUy">
-                                <rect key="frame" x="67" y="134" width="240" height="128"/>
-                                <color key="backgroundColor" red="0.59182930558238511" green="0.64697541240837975" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aRR-F7-Eqb">
                                 <rect key="frame" x="30" y="428" width="45" height="30"/>
                                 <state key="normal" title="第一个"/>
@@ -328,6 +324,10 @@
                                     <action selector="thirdButton:" destination="Bor-3p-wg2" eventType="touchUpInside" id="Riw-iq-gew"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QDU-OF-cUy">
+                                <rect key="frame" x="52" y="103" width="73" height="77"/>
+                                <color key="backgroundColor" red="0.59182930558238511" green="0.64697541240837975" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -338,7 +338,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7CN-QP-gRm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="958.5" y="-618.5"/>
+            <point key="canvasLocation" x="885.5" y="-630.5"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="qoz-q5-z2Z">

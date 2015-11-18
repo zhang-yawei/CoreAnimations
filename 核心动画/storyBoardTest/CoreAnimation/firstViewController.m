@@ -31,17 +31,34 @@
 
 - (IBAction)firstButton:(id)sender {
 
+    CABasicAnimation *animation = [CABasicAnimation animation];
+    animation.keyPath = @"position.x";
+    animation.fromValue = @0;
+    animation.toValue = @400;
+    animation.duration = 1;
     
-    self.viewToAnimation.layer;
-    CATransform3DMakeTranslation(1, 2, 1);
+    animation.fillMode = kCAFillModeForwards;
+    animation.removedOnCompletion = NO;
     
+    [self.viewToAnimation.layer addAnimation:animation forKey:@"basic"];
+    
+  //  self.viewToAnimation.layer.position =  CGPointMake(400,200);
+ 
     
     
     
 }
 
 - (IBAction)secondButton:(id)sender {
+    CAKeyframeAnimation *animation = [CAKeyframeAnimation animation];
+    animation.keyPath = @"position.x";
+    animation.values = @[ @0, @10, @-10, @10, @0 ];
+    animation.keyTimes = @[ @0, @(1 / 6.0), @(3 / 6.0), @(5 / 6.0), @1 ];
+    animation.duration = 0.4;
     
+    animation.additive = YES;
+    
+    [self.viewToAnimation.layer addAnimation:animation forKey:@"shake"];
     
 }
 
