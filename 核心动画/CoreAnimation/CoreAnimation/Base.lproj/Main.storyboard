@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="A1a-CT-ODd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="A1a-CT-ODd">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -365,10 +365,6 @@
                                     <action selector="all:" destination="koI-9d-5Fj" eventType="touchUpInside" id="oKB-DO-Ote"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CK6-jm-WMr">
-                                <rect key="frame" x="160" y="445" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pal-g5-OS1">
                                 <rect key="frame" x="255" y="381" width="76" height="30"/>
                                 <state key="normal" title="放大缩小"/>
@@ -381,6 +377,13 @@
                                 <state key="normal" title="x轴旋转"/>
                                 <connections>
                                     <action selector="revolution:" destination="koI-9d-5Fj" eventType="touchUpInside" id="ilT-AH-D1e"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CK6-jm-WMr">
+                                <rect key="frame" x="141" y="452" width="112" height="30"/>
+                                <state key="normal" title="  插入图层"/>
+                                <connections>
+                                    <action selector="insertLayer:" destination="koI-9d-5Fj" eventType="touchUpInside" id="bvI-Mm-dYd"/>
                                 </connections>
                             </button>
                         </subviews>

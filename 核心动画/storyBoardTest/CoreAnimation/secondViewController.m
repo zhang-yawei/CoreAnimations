@@ -27,33 +27,32 @@
     // 初始化
     _kkLayer = [[CALayer alloc]init];
     _kkLayer.backgroundColor = [UIColor grayColor].CGColor;
-    _kkLayer.frame = CGRectMake(10, 100, 40, 40);
+    _kkLayer.frame = CGRectMake(100, 100, 40, 40);
     
     _kkLayer.cornerRadius = 5;
     [self.view.layer addSublayer:_kkLayer];
+    NSLog(@"%f,%f",_kkLayer.anchorPoint.x,_kkLayer.anchorPoint.y);
     
     
 }
 
-
-
 - (IBAction)moveBtn:(id)sender {
-  
     _animation = [CABasicAnimation animationWithKeyPath:@"position"];
-    
+
     _animation.fromValue = [NSValue valueWithCGPoint:_kkLayer.position];
+    
     CGPoint toPoint = _kkLayer.position;
     toPoint.x = toPoint.x + 180;
     _animation.toValue = [NSValue valueWithCGPoint:toPoint];
     _animation.duration  = 2;
     _animation.autoreverses = YES;
     [_kkLayer addAnimation:_animation forKey:nil];
-    
+    NSLog(@"%f,%f",_kkLayer.anchorPoint.x,_kkLayer.anchorPoint.y);
 
 }
 
 - (IBAction)revolution:(id)sender {
-    
+
     _rotateAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.y"];
     _rotateAnimation.fromValue = [NSNumber numberWithFloat:0.0];
     _rotateAnimation.toValue = [NSNumber numberWithFloat:6.0 * M_PI];
@@ -61,7 +60,7 @@
     _rotateAnimation.autoreverses = YES;
     [_kkLayer addAnimation:_rotateAnimation forKey:nil];
     
-    
+    NSLog(@"%f,%f",_kkLayer.anchorPoint.x,_kkLayer.anchorPoint.y);
 }
 
 - (IBAction)bigSmall:(id)sender {
@@ -85,12 +84,22 @@
     group.duration = 2;
     group.autoreverses = YES;
     [_kkLayer addAnimation:group forKey:nil];
+  
+}
+
+-(IBAction)insertLayer:(id)sender
+{
+    
+    CALayer *layer = [[CALayer alloc]init];
+
+    layer.backgroundColor = [UIColor redColor].CGColor;
+    layer.frame = CGRectMake(50, 50, 200, 200);
+    [self.view.layer insertSublayer:layer below:_kkLayer];
+
     
     
     
 }
-
-
 
 
 

@@ -38,7 +38,7 @@
     animation.duration = 1;
     
     animation.fillMode = kCAFillModeForwards;
-    animation.removedOnCompletion = NO;
+    animation.removedOnCompletion = YES;
     
     [self.viewToAnimation.layer addAnimation:animation forKey:@"basic"];
     
