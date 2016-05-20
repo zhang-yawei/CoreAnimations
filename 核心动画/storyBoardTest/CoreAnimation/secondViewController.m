@@ -45,7 +45,7 @@
     toPoint.x = toPoint.x + 180;
     _animation.toValue = [NSValue valueWithCGPoint:toPoint];
     _animation.duration  = 2;
-    _animation.autoreverses = YES;
+    _animation.autoreverses = YES; // 自动返回
     [_kkLayer addAnimation:_animation forKey:nil];
     NSLog(@"%f,%f",_kkLayer.anchorPoint.x,_kkLayer.anchorPoint.y);
 
@@ -53,7 +53,7 @@
 
 - (IBAction)revolution:(id)sender {
 
-    _rotateAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.y"];
+    _rotateAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.x"];
     _rotateAnimation.fromValue = [NSNumber numberWithFloat:0.0];
     _rotateAnimation.toValue = [NSNumber numberWithFloat:6.0 * M_PI];
     _rotateAnimation.duration = 2;

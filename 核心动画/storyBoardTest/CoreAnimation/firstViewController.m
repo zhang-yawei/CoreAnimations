@@ -30,7 +30,7 @@
 
 
 - (IBAction)firstButton:(id)sender {
-
+//    CABasicAnimation :CAPropertyAnimation ,加入了 fromeValue toValue
     CABasicAnimation *animation = [CABasicAnimation animation];
     animation.keyPath = @"position.x";
     animation.fromValue = @0;
@@ -41,6 +41,7 @@
     animation.removedOnCompletion = YES;
     
     [self.viewToAnimation.layer addAnimation:animation forKey:@"basic"];
+    
     
   //  self.viewToAnimation.layer.position =  CGPointMake(400,200);
  
