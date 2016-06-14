@@ -78,7 +78,9 @@
 
 - (IBAction)all:(id)sender {
 
-  // 动画组
+  
+    
+    // 动画组
     CAAnimationGroup *group = [CAAnimationGroup animation];
     group.animations = [NSArray arrayWithObjects:_animation,_scaoleAnimation,_rotateAnimation,nil];
     group.duration = 2;
